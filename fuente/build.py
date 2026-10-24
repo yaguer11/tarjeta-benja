@@ -1,5 +1,11 @@
-import base64,re
-t=open('template.html',encoding='utf-8').read()
+# Genera ../index.html a partir de template.html.
+# Las imagenes se copian a ../img/ y se enlazan como archivos (asi el HTML queda liviano
+# y WhatsApp puede leer la vista previa del link).
+import re, shutil, os
+t = open('template.html', encoding='utf-8').read()
+os.makedirs('../img', exist_ok=True)
 def rep(m):
-    return 'data:image/webp;base64,'+base64.b64encode(open(f'src/{m.group(1)}.webp','rb').read()).decode()
-open('../index.html','w',encoding='utf-8').write(re.sub(r'\{\{(\w+)\}\}',rep,t))
+    name = m.group(1)
+    shutil.copyfile(f'src/{name}.webp', f'../img/{name}.webp')
+    return f'img/{name}.webp'
+open('../index.html', 'w', encoding='utf-8').write(re.sub(r'\{\{(\w+)\}\}', rep, t))
