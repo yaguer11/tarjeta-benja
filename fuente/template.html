@@ -8,7 +8,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://benjamin-1anito.netlify.app/">
 <meta property="og:title" content="¡Mi primer añito! · Benjamín 🦕">
-<meta property="og:description" content="Domingo 13 de diciembre · 19 a 22 hs · Balcarce 322, Villa Mercedes. ¡Te esperamos!">
+<meta property="og:description" content="Domingo 13 de diciembre · 19 a 22 hs · Salón Mangiare, Balcarce 322, Villa Mercedes. ¡Te esperamos!">
 <meta property="og:image" content="https://benjamin-1anito.netlify.app/preview.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
@@ -91,7 +91,7 @@ h1{font-family:'Fredoka';font-weight:600;font-size:clamp(46px,14vw,62px);color:#
 .date .mini2{width:min(13vw,56px);animation-delay:.6s}
 .date .year{font-family:'Cormorant Garamond',serif;font-weight:600;letter-spacing:.2em;color:#8a8f86;font-size:14px;align-self:start;margin-top:4px}
 .hour{margin-top:20px;font-family:'Fredoka',sans-serif;font-size:22px;font-weight:600;letter-spacing:.06em;color:#4f554c}
-.place{margin-top:16px;font-family:'Fredoka',sans-serif;font-size:17px;font-weight:500;letter-spacing:.06em;line-height:1.35;color:#555b52}
+.place{margin-top:4px;font-family:'Fredoka',sans-serif;font-size:17px;font-weight:500;letter-spacing:.06em;line-height:1.35;color:#555b52}
 .pill{display:inline-flex;align-items:center;justify-content:center;gap:7px;text-decoration:none;cursor:pointer;
   font:500 15px 'Fredoka';border-radius:999px;padding:9px 16px;transition:transform .15s}
 .pill:active{transform:scale(.96)}
@@ -99,17 +99,22 @@ h1{font-family:'Fredoka';font-weight:600;font-size:clamp(46px,14vw,62px);color:#
 .pill.map{margin-top:16px;color:#4f7f74;border:1.5px solid #9cc0b6;background:rgba(255,255,255,.7)}
 .leafline{display:block;width:120px;margin:24px auto 16px;opacity:.85}
 .lead{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:18px;line-height:1.3;color:#5d625a}
-.rsvp-btns{display:flex;gap:10px;justify-content:center;margin-top:12px}
-.pill.wa{flex:1;color:#fff;background:#7fa886;box-shadow:0 3px 0 #62896a}
-.pill.wa.papa{background:#6f9fae;box-shadow:0 3px 0 #557f8c}
+.howto{font-family:'Fredoka';font-weight:500;font-size:18px;line-height:1.3;color:#4f554c;margin-top:16px}
+.rsvp-btns{display:flex;flex-direction:column;gap:12px;align-items:stretch;margin:12px auto 0;max-width:290px}
+.rsvp-btns .pill{font-size:17px;font-weight:600;padding:13px 18px}
+.rsvp-btns .pill svg{width:21px;height:21px}
+.note{font-family:'Fredoka';font-size:13.5px;color:#7d837a;margin-top:10px;line-height:1.3}
+.venue{font-family:'Fredoka';font-weight:600;font-size:20px;color:#5a8a64;margin-top:16px;letter-spacing:.02em}
+.pill.wa{color:#fff;background:#3fae66;box-shadow:0 4px 0 #2e8a50}
+.pill.wa.papa{background:#3f9fb0;box-shadow:0 4px 0 #2f7f8d}
 .pill.confirm{margin-top:4px;border:0;font-size:18px;font-weight:600;color:#fff;background:#7fa886;padding:13px 26px;
   box-shadow:0 4px 0 #62896a,0 10px 22px rgba(98,137,106,.28);animation:pulse 2.2s 2s ease-in-out infinite}
 .pill.confirm svg{width:20px;height:20px}
-.confirm-panel .hatch{width:min(34vw,150px);margin:0 auto 4px}
+.confirm-panel .hatch{width:min(26vw,118px);margin:0 auto 4px}
 .confirm-panel .hatch{animation:rise .8s .1s cubic-bezier(.2,1,.3,1) forwards}
 .ctitle{font-family:'Fredoka';font-weight:600;font-size:clamp(26px,8vw,34px);color:#6f9a78;line-height:1.1}
 .confirm-panel .lead{margin-top:8px}
-.ftitle{font-family:'Fredoka';font-weight:500;font-size:14px;letter-spacing:.25em;text-transform:uppercase;color:#7d837a;margin-top:22px}
+.ftitle{font-family:'Fredoka';font-weight:500;font-size:14px;letter-spacing:.25em;text-transform:uppercase;color:#7d837a;margin-top:16px}
 .count{display:flex;justify-content:center;gap:8px;margin:8px auto 0;width:min(92vw,340px);margin-left:calc((min(66vw,330px) - min(92vw,340px)) / 2)}
 .count .t{flex:1;max-width:76px;aspect-ratio:1;border-radius:50%;background:rgba(255,255,255,.75);border:2px solid #c9d8c4;
   display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(120,140,110,.15)}
@@ -167,7 +172,7 @@ h1{font-family:'Fredoka';font-weight:600;font-size:clamp(46px,14vw,62px);color:#
 @keyframes fly{0%{left:-40vw;transform:translateY(0)}25%{transform:translateY(-20px)}50%{transform:translateY(15px)}75%{transform:translateY(-10px)}100%{left:120vw;transform:translateY(0)}}
 @keyframes fall{to{transform:translateY(110vh) rotate(540deg)}}
 @media (prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-iteration-count:1!important}}
-.kicker,.name,h1,.phrase,.cap,.lead,.bye,.ctitle,.ftitle,.date{text-shadow:0 0 10px var(--paper),0 0 18px var(--paper)}
+.kicker,.name,h1,.phrase,.cap,.lead,.bye,.ctitle,.ftitle,.date,.venue,.howto,.note{text-shadow:0 0 10px var(--paper),0 0 18px var(--paper)}
 </style>
 </head>
 <body>
@@ -208,9 +213,10 @@ h1{font-family:'Fredoka';font-weight:600;font-size:clamp(46px,14vw,62px);color:#
     </div>
 
     <p class="cap hour rv" style="--i:3">19:00 a 22:00 hs</p>
+    <p class="venue rv" style="--i:4">Salón Mangiare</p>
     <p class="cap place rv" style="--i:4">Balcarce 322<br>Villa Mercedes</p>
     <div class="rv" style="--i:5">
-      <a class="pill map" href="https://www.google.com/maps/search/?api=1&query=Balcarce+322,+Villa+Mercedes,+San+Luis,+Argentina" target="_blank" rel="noopener">
+      <a class="pill map" href="https://www.google.com/maps/search/?api=1&query=Mangiare%2C+Balcarce+322%2C+D5730+Villa+Mercedes%2C+San+Luis" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
         Ver ubicación
       </a>
@@ -231,9 +237,10 @@ h1{font-family:'Fredoka';font-weight:600;font-size:clamp(46px,14vw,62px);color:#
     <img class="hatch rv" style="--i:0" src="{{egg}}" alt="">
     <h2 class="ctitle rv" style="--i:1">¡Confirmá tu asistencia!</h2>
     <p class="lead rv" style="--i:2">Nos encantaría que formes parte de este momento tan especial</p>
+    <p class="howto rv" style="--i:3">Confirmale a mi mamá o a mi papá por WhatsApp 👇</p>
     <div class="rsvp-btns rv" style="--i:3">
-      <a class="pill wa" id="waMama" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Mamá</a>
-      <a class="pill wa papa" id="waPapa" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Papá</a>
+      <a class="pill wa" id="waMama" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Confirmar con mamá</a>
+      <a class="pill wa papa" id="waPapa" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Confirmar con papá</a>
     </div>
 
     <p class="ftitle rv" style="--i:4">Faltan</p>
