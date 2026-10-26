@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Mi primer añito · Benjamín</title>
-<meta name="description" content="¡Un año de pura alegría y momentos mágicos! Vení a festejar el 1° añito de Benjamín con nosotros. Domingo 13 de diciembre, 19 a 22 hs.">
+<meta name="description" content="¡Un año de pura alegría y momentos mágicos! Vení a festejar el 1° añito de Benjamín con nosotros. Sábado 12 de diciembre, 19 a 22 hs.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://benjamin-1anito.netlify.app/">
 <meta property="og:title" content="¡Mi primer añito! · Benjamín 🦕">
-<meta property="og:description" content="Domingo 13 de diciembre · 19 a 22 hs · Salón Mangiare, Balcarce 322, Villa Mercedes. ¡Te esperamos!">
+<meta property="og:description" content="Sábado 12 de diciembre · 19 a 22 hs · Salón Mangiare, Balcarce 322, Villa Mercedes. ¡Te esperamos!">
 <meta property="og:image" content="https://benjamin-1anito.netlify.app/preview.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
@@ -204,8 +204,8 @@ h1{font-family:'Fredoka';font-weight:600;font-size:clamp(46px,14vw,62px);color:#
     <p class="phrase rv" style="--i:1">¡Un año de pura alegría y momentos mágicos! Vení a festejar el <strong>1° añito de Benjamín</strong> con nosotros.</p>
 
     <div class="date rv" style="--i:2">
-      <div class="side">Domingo</div>
-      <div class="day">13</div>
+      <div class="side">Sábado</div>
+      <div class="day">12</div>
       <div class="side">Diciembre</div>
       <span></span>
       <div class="year">2026</div>
@@ -259,7 +259,7 @@ h1{font-family:'Fredoka';font-weight:600;font-size:clamp(46px,14vw,62px);color:#
 <script>
 (function(){
   // ---- WhatsApp ----
-  var MSG = "¡Hola! 🦕 Confirmo mi asistencia al 1° añito de Benjamín, el domingo 13 de diciembre a las 19 hs. ¡Allí estaremos!";
+  var MSG = "¡Hola! 🦕 Confirmo mi asistencia al 1° añito de Benjamín, el sábado 12 de diciembre a las 19 hs. ¡Allí estaremos!";
   var NUM_MAMA = "5492657505668";
   var NUM_PAPA = "5492334484988";
   document.getElementById('waMama').href = "https://wa.me/" + NUM_MAMA + "?text=" + encodeURIComponent(MSG);
@@ -320,7 +320,7 @@ h1{font-family:'Fredoka';font-weight:600;font-size:clamp(46px,14vw,62px);color:#
   window.addEventListener('popstate', function(){ if (!confirmPanel.hidden) showDetails(); });
 
   // ---- Cuenta regresiva ----
-  var target = new Date('2026-12-13T19:00:00-03:00').getTime();
+  var target = new Date('2026-12-12T19:00:00-03:00').getTime();
   function pad(n){ return n<10 ? '0'+n : n; }
   function tick(){
     var d = target - Date.now();
